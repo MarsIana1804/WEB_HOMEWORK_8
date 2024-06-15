@@ -10,11 +10,11 @@ def read_secrets(file_path):
         return json.load(file)
 
 # Read secrets from the secrets.json file
-secrets = read_secrets('secrets.json')
+secrets = read_secrets('secrets_mongo.json')
 username = secrets['username']
 password = secrets['password']
 
-connection_string = 'mongodb+srv://{}:{}@cluster0.pfry08b.mongodb.net/homework_8_02_mongo_db?retryWrites=true&w=majority'.format(username, password)
+connection_string = "mongodb+srv://{}:{}@marsianka.rffwu2u.mongodb.net/my_db_3?retryWrites=true&w=majority&appName=Marsianka".format(username, password)
 print(connection_string)
 # Connect to MongoDB using the credentials from the secret file
 connect(host=connection_string)
